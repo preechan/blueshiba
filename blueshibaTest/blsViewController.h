@@ -11,5 +11,5 @@
 @interface blsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property IBOutlet UITableView *tableView;
-@property NSArray *users;
+@property NSMutableArray *users;
 @end

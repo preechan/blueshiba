@@ -33,7 +33,7 @@
                           options:kNilOptions
                           error:&error];
     
-    self.users = [[json valueForKey:@"_embedded"] valueForKey:@"user"];
+    self.users =  [NSMutableArray arrayWithArray:[[json valueForKey:@"_embedded"] valueForKey:@"user"]];
     [self.tableView reloadData];
 }
 
@@ -102,4 +102,26 @@
          [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
      }
 }
+
+#pragma  mark - Editing Table View
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Delete");
+    NSError *error = nil;
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",endpoint,[[self.users objectAtIndex:[self.tableView indexPathForSelectedRow].row] valueForKey:@"user_id"]]]];
+    [request setHTTPMethod:@"DELETE"];
+    NSURLResponse *response;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSLog(@"response %@",response);
+    if(error){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+    [self.users removeObjectAtIndex:indexPath.row];
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+}
+
+
 @end
