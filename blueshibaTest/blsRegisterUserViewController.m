@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.title = @"Registration";
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,16 +51,20 @@
     [request setHTTPBody:[self encodeDictionary:dict]];
     NSURLResponse *response;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSLog(@"request %@",[request description]);
-    NSLog(@"response %@",[response description]);
-    
-    NSDictionary *json = [NSJSONSerialization
-                          JSONObjectWithData:data
-                          
-                          options:kNilOptions
-                          error:&error];
-    
-    NSLog(@"json %@",json);
+
+    if(error){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+    else{
+        NSDictionary *json = [NSJSONSerialization
+                              JSONObjectWithData:data
+                              
+                              options:kNilOptions
+                              error:&error];
+        NSLog(@"json response to register %@",json);
+    }
+   
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

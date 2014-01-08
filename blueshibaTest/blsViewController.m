@@ -15,9 +15,8 @@
 
 @implementation blsViewController
 
-- (void)viewDidLoad
+- (void)loadUsers
 {
-    [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://blueshiba.com/testAPI/user"]]];
@@ -34,9 +33,18 @@
                           options:kNilOptions
                           error:&error];
     
-     NSLog(@"json %@",json);
     self.users = [[json valueForKey:@"_embedded"] valueForKey:@"user"];
     [self.tableView reloadData];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [self loadUsers];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,11 +58,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"CellID";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:CellIdentifier];
-    }
     
     cell.textLabel.text = [[self.users objectAtIndex:indexPath.row] valueForKey:@"username"];
     if([[[self.users objectAtIndex:indexPath.row] valueForKey:@"is_mutable"] boolValue]){
@@ -66,7 +71,6 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"[self.users count] %d",[self.users count]);
     return [self.users count];
 }
 
@@ -81,7 +85,6 @@
            
         blsUpdateUserViewController *vc = (blsUpdateUserViewController *)[segue destinationViewController];
        vc.user = [self.users objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-    NSLog(@"user %@",vc.user);
         
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                                  style:UIBarButtonItemStyleBordered
