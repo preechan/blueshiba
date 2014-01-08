@@ -121,6 +121,8 @@
 		77B19196187CB4F4005CB02A /* blueshibaTest */ = {
 			isa = PBXGroup;
 			children = (
+				77B191CF187CDC6D005CB02A /* blsRegisterUserViewController.h */,
+				77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */,
 				77B191CC187CBCC8005CB02A /* blsUpdateUserViewController.h */,
 				77B191CD187CBCC8005CB02A /* blsUpdateUserViewController.m */,
 				77B1919F187CB4F4005CB02A /* blsAppDelegate.h */,
@@ -130,8 +132,6 @@
 				77B191A6187CB4F4005CB02A /* blsViewController.m */,
 				77B191A8187CB4F4005CB02A /* Images.xcassets */,
 				77B19197187CB4F4005CB02A /* Supporting Files */,
-				77B191CF187CDC6D005CB02A /* blsRegisterUserViewController.h */,
-				77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */,
 				77B191D2187DA685005CB02A /* blsGlobals.h */,
 				77B191D3187DA685005CB02A /* blsGlobals.m */,
 			);

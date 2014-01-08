@@ -107,14 +107,13 @@
 
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Delete");
     NSError *error = nil;
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",endpoint,[[self.users objectAtIndex:[self.tableView indexPathForSelectedRow].row] valueForKey:@"user_id"]]]];
     [request setHTTPMethod:@"DELETE"];
     NSURLResponse *response;
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSLog(@"response %@",response);
+    NSLog(@"response for delete %@",response);
     if(error){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
