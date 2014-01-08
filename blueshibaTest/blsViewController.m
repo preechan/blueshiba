@@ -17,9 +17,9 @@
 
 - (void)loadUsers
 {
-	// Do any additional setup after loading the view, typically from a nib.
+	// Load Users
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://blueshiba.com/testAPI/user"]]];
+    [request setURL:[NSURL URLWithString:endpoint]];
     [request setHTTPMethod:@"GET"];
     [request setValue:0 forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"text/html; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];

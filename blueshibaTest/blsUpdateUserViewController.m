@@ -14,6 +14,7 @@
 
 @implementation blsUpdateUserViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -52,7 +53,7 @@
     
     NSError *error = nil;
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://blueshiba.com/testAPI/user/%@",[self.user valueForKey:@"user_id"]]]];
+    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",endpoint,[self.user valueForKey:@"user_id"]]]];
     [request setHTTPMethod:@"PUT"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:[self encodeDictionary:dict]];

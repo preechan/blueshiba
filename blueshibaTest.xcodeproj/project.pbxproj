@@ -23,6 +23,7 @@
 		77B191BC187CB4F4005CB02A /* blueshibaTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B191BB187CB4F4005CB02A /* blueshibaTestTests.m */; };
 		77B191CE187CBCC8005CB02A /* blsUpdateUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B191CD187CBCC8005CB02A /* blsUpdateUserViewController.m */; };
 		77B191D1187CDC6D005CB02A /* blsRegisterUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */; };
+		77B191D4187DA685005CB02A /* blsGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B191D3187DA685005CB02A /* blsGlobals.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		77B191CD187CBCC8005CB02A /* blsUpdateUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blsUpdateUserViewController.m; sourceTree = "<group>"; };
 		77B191CF187CDC6D005CB02A /* blsRegisterUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blsRegisterUserViewController.h; sourceTree = "<group>"; };
 		77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blsRegisterUserViewController.m; sourceTree = "<group>"; };
+		77B191D2187DA685005CB02A /* blsGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blsGlobals.h; sourceTree = "<group>"; };
+		77B191D3187DA685005CB02A /* blsGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blsGlobals.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				77B19197187CB4F4005CB02A /* Supporting Files */,
 				77B191CF187CDC6D005CB02A /* blsRegisterUserViewController.h */,
 				77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */,
+				77B191D2187DA685005CB02A /* blsGlobals.h */,
+				77B191D3187DA685005CB02A /* blsGlobals.m */,
 			);
 			path = blueshibaTest;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				77B1919D187CB4F4005CB02A /* main.m in Sources */,
 				77B191CE187CBCC8005CB02A /* blsUpdateUserViewController.m in Sources */,
 				77B191A7187CB4F4005CB02A /* blsViewController.m in Sources */,
+				77B191D4187DA685005CB02A /* blsGlobals.m in Sources */,
 				77B191D1187CDC6D005CB02A /* blsRegisterUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,10 +9,11 @@
 #import "blsRegisterUserViewController.h"
 
 @interface blsRegisterUserViewController ()
-
 @end
 
+
 @implementation blsRegisterUserViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,7 +46,7 @@
     
     NSError *error = nil;
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://blueshiba.com/testAPI/user"]]];
+    [request setURL:[NSURL URLWithString:endpoint]];
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:[self encodeDictionary:dict]];
