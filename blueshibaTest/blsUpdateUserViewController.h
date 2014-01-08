@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "blsRegisterUserViewController.h"
 
-@interface blsUpdateUserViewController : UIViewController
+@interface blsUpdateUserViewController : blsRegisterUserViewController
 
 @property(nonatomic,retain)  NSDictionary *user;
-@property(nonatomic,retain) IBOutlet UITextField *username;
-@property(nonatomic,retain) IBOutlet UITextField *city;
+
 @end

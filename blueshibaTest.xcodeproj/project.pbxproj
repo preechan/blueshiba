@@ -22,6 +22,7 @@
 		77B191BA187CB4F4005CB02A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77B191B8187CB4F4005CB02A /* InfoPlist.strings */; };
 		77B191BC187CB4F4005CB02A /* blueshibaTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B191BB187CB4F4005CB02A /* blueshibaTestTests.m */; };
 		77B191CE187CBCC8005CB02A /* blsUpdateUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B191CD187CBCC8005CB02A /* blsUpdateUserViewController.m */; };
+		77B191D1187CDC6D005CB02A /* blsRegisterUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		77B191BB187CB4F4005CB02A /* blueshibaTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blueshibaTestTests.m; sourceTree = "<group>"; };
 		77B191CC187CBCC8005CB02A /* blsUpdateUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blsUpdateUserViewController.h; sourceTree = "<group>"; };
 		77B191CD187CBCC8005CB02A /* blsUpdateUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blsUpdateUserViewController.m; sourceTree = "<group>"; };
+		77B191CF187CDC6D005CB02A /* blsRegisterUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blsRegisterUserViewController.h; sourceTree = "<group>"; };
+		77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blsRegisterUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				77B191A6187CB4F4005CB02A /* blsViewController.m */,
 				77B191A8187CB4F4005CB02A /* Images.xcassets */,
 				77B19197187CB4F4005CB02A /* Supporting Files */,
+				77B191CF187CDC6D005CB02A /* blsRegisterUserViewController.h */,
+				77B191D0187CDC6D005CB02A /* blsRegisterUserViewController.m */,
 			);
 			path = blueshibaTest;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				77B1919D187CB4F4005CB02A /* main.m in Sources */,
 				77B191CE187CBCC8005CB02A /* blsUpdateUserViewController.m in Sources */,
 				77B191A7187CB4F4005CB02A /* blsViewController.m in Sources */,
+				77B191D1187CDC6D005CB02A /* blsRegisterUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
